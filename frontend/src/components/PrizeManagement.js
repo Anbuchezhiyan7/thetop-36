@@ -74,7 +74,7 @@ function PrizeManagement() {
 
   const fetchPrizes = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/prizes");
+      const response = await fetch("https://thetop-36-backend.onrender.com/api/prizes");
       const data = await response.json();
       setPrizes(data);
     } catch (error) {
@@ -102,7 +102,7 @@ function PrizeManagement() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/prizes", {
+      const response = await fetch("https://thetop-36-backend.onrender.com/api/prizes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -135,7 +135,7 @@ function PrizeManagement() {
   const handleEditSubmit = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/prizes/${editingPrize.id}`,
+        `https://thetop-36-backend.onrender.com/api/prizes/${editingPrize.id}`,
         {
           method: "PUT",
           headers: {
@@ -156,7 +156,7 @@ function PrizeManagement() {
   const handleStatusChange = async (prize, newStatus) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/prizes/${prize.id}`,
+        `https://thetop-36-backend.onrender.com/api/prizes/${prize.id}`,
         {
           method: "PUT",
           headers: {
@@ -175,7 +175,7 @@ function PrizeManagement() {
   const handleShippingUpdate = async (prize) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/prizes/${prize.id}`,
+        `https://thetop-36-backend.onrender.com/api/prizes/${prize.id}`,
         {
           method: "PUT",
           headers: {
