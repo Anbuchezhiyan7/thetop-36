@@ -84,7 +84,7 @@ function EnrollmentConfirmation() {
     // Simulate fetching enrollment data
     const fetchEnrollment = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/enroll", {
+        const response = await fetch("https://thetop-36-backend.onrender.com/api/enroll", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -151,7 +151,7 @@ function EnrollmentConfirmation() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/opt-out/${Buffer.from(email).toString(
+        `https://thetop-36-backend.onrender.com/api/opt-out/${Buffer.from(email).toString(
           "base64"
         )}`,
         {
