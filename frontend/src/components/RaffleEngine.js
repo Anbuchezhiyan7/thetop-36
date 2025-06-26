@@ -121,7 +121,7 @@ function RaffleEngine() {
 
   const fetchPrizes = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/prizes");
+      const response = await fetch("https://thetop-36-backend.onrender.com/api/prizes");
       const data = await response.json();
       setPrizes(data);
       setLoading(false);
@@ -144,7 +144,7 @@ function RaffleEngine() {
 
       // Step 2: Select Winner
       const response = await fetch(
-        `http://localhost:5000/api/raffle/draw/${prize.id}`,
+        `https://thetop-36-backend.onrender.com/api/raffle/draw/${prize.id}`,
         {
           method: "POST",
         }
@@ -201,7 +201,7 @@ function RaffleEngine() {
   const handleStatusChange = async (newStatus) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/prizes/${selectedPrizeForMenu.id}`,
+        `https://thetop-36-backend.onrender.com/api/prizes/${selectedPrizeForMenu.id}`,
         {
           method: "PUT",
           headers: {
@@ -221,7 +221,7 @@ function RaffleEngine() {
   const handleShippingUpdate = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/prizes/${selectedPrizeForMenu.id}`,
+        `https://thetop-36-backend.onrender.com/api/prizes/${selectedPrizeForMenu.id}`,
         {
           method: "PUT",
           headers: {
@@ -250,7 +250,7 @@ function RaffleEngine() {
   const handleEditSubmit = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/prizes/${editingPrize.id}`,
+        `https://thetop-36-backend.onrender.com/api/prizes/${editingPrize.id}`,
         {
           method: "PUT",
           headers: {
